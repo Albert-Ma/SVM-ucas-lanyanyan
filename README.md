@@ -44,5 +44,5 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - ___1.max γ <=> max γ^/(|w|2),s.t.yi((w/|w|2)xi+b/|w|2)≥γ^___
 #### 最后的优化margin分类器
 - ___2.对w和b进行放缩对最后结果没有影响：min 1/2*(|w|2)^2 s.t.yi((w/|w|2)xi+b/|w|2)≥1___
-- 目标函数是凸函数，通过二次规划QP可求解
+- 目标函数是凸函数，通过二次规划QP可求解  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)   
