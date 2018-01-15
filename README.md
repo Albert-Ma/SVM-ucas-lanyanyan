@@ -27,20 +27,22 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 ### 简单的推导（徐君）：  
 
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-3.png)      
-- ___wx1+b = 1,wx2+b = -1___ => ___w(x1-x2) = 2___,以x1(向量)替代x+，x2替代x-___<1>___
+- ___wx1+b = 1,wx2+b = -1 => w(x1-x2) = 2,以x1(向量)替代x+，x2替代x-<1>___
 - ___x1 = x2+λw => x1-x2 = λw___ ___<2>___
-- 由1和2推出：2/w ___=λw => λ = 2/(w)^2___
-- 分类间隔Margin = ___|x1-x2| = |λw| = 2/(w)^2 * |w|= 2/|w|___  
-- ___最大化M即max 2/|w| 等价于 min|w|^2___
+- ___由1和2推出：2/w=λw => λ = 2/(w)^2___
+- ___分类间隔Margin = |x1-x2| = |λw| = 2/(w)^2 * |w|= 2/|w|___  
+- ___最大化Margin即max 2/|w| 等价于 min|w|^2(有的乘以1/2，常数无所谓)___
 ### 简单的推导（兰艳艳）：  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-5.png) 
-- 点A（xi,yi）,A到分类面的边距γi（向量）
+- 点A（xi,yi）,A到分类面的边距γi（向量）,γi是第i个点到分类面的距离
 - 点B用A表示xj=___xi-γi(w/|w|2)，将其代入wx+b=0得
 - ___w(xi-γi(w/|w|2))+b=0 => γi=(w/|w|2)xi+b/|w|2___  
-- ___γi可正可负，最终的γi = yi((w/|w|2)xi+b/|w|2)___
-- ___γ=min γi___
+- ___γi是个向量有方向，为了使结果为正乘以yi，γi = yi((w/|w|2)xi+b/|w|2)___
+- ___最终的Margin就是γ=min γi___
 #### 函数边际和几何边际的关系
-- ___γ = γ^/(|w|2)当|w|=1时两者相等___
-- ___max γ <=> max γ^/(|w|2),___ s.t.
-### 最后的优化margin分类器
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)  
+- ___γ = γ^/(|w|2)当|w|=1时两者相等___  
+- ___1.max γ <=> max γ^/(|w|2),s.t.yi((w/|w|2)xi+b/|w|2)≥γ^___
+#### 最后的优化margin分类器
+- ___2.对w和b进行放缩对最后结果没有影响：min 1/2*(|w|2)^2 s.t.yi((w/|w|2)xi+b/|w|2)≥1___
+- 目标函数是凸函数，通过二次规划QP可求解
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)   
