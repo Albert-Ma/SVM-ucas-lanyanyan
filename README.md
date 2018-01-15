@@ -21,17 +21,17 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 ## 函数间距  
 - 回到2.线性分类器上：f(x)=wx+b,f(x)>0,lable=1(正例);f(x)<0,lable=-1(反例)   
 - 分类的超平面(实际是条线):wx+b=0
-- ___γ^=min y(wx+b)___,点到分类面的距离**最小**的那个，这些点也称为支持向量，后面说  
+- ___γ=min y(wx+b)___,点到分类面的距离**最小**的那个，这些点也称为支持向量，后面说  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-2.png)  
 ## 几何间距  
 ### 简单的推导（徐君）：  
 
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-3.png)      
 - ___wx1+b = 1,wx2+b = -1___ => ___w(x1-x2) = 2___,以x1(向量)替代x+，x2替代x-___<1>___
-- ___x1 = x2+λw => x1-x2 = λw<2>___
+- ___x1 = x2+λw => x1-x2 = λw___ ___<2>___
 - 由1和2推出：2/w ___=λw => λ = 2/(w)^2___
-- 分类间隔Margin = ___|x1-x2| = |λw| = 2/(w)^2 * |w|= 2/|w|___
-- 最大化M即max 2/|w|(2/(根号w向量的平方)) 等价于 ___min|w|^2___
+- 分类间隔Margin = ___|x1-x2| = |λw| = 2/(w)^2 * |w|= 2/|w|___  
+- ___最大化M即max 2/|w| 等价于 min|w|^2___
 ### 简单的推导（兰艳艳）：  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-5.png) 
 - 点A（xi,yi）,A到分类面的边距γi（向量）
@@ -41,6 +41,6 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - ___γ=min γi___
 #### 函数边际和几何边际的关系
 - ___γ = γ^/(|w|2)当|w|=1时两者相等___
-- ___max γ <=> max γ^/(|w|2), s.t. ___
+- ___max γ <=> max γ^/(|w|2),___ s.t.
 ### 最后的优化margin分类器
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)  
