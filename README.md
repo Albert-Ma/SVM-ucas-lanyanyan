@@ -24,5 +24,11 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-2.png)  
 ## 几何间距  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-3.png)  
-简单的推导：  
-- wx1+b=1 wx2+b=-1 $$ => w(x1-x2) = 2,以x1替代x……+，x2替代x……-
+简单的推导（徐君）：  
+- wx1+b = 1 wx2+b = -1 => w(x1-x2) = 2,以x1(向量)替代x+，x2替代x-   1
+- x1 = x2+λw => x1-x2 = λw     2
+- 由1和2推出：2/w = λw => λ = 2/(w)^2
+- 分类间隔Margin = |x1-x2| = |λw| = 2/(w)^2 * |w| = 2/|w|
+- 最大化M即max 2/|w|(2/(根号w向量的平方)) 等价于 min|w|^2
+### 最后的优化margin分类器
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)  
