@@ -7,3 +7,4 @@
 创始人及主要的贡献人Vapnik  
 Linear SVM-> Kernelized SVM-> SVR...SMO...  
 # 2.Linear线性分类器
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/linear-clasifier.png)
