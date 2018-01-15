@@ -3,4 +3,7 @@
 @2018/15  
 @authon xy
 
-# History
+# 1.History
+创始人及主要的贡献人Vapnik  
+Linear SVM-> Kernelized SVM-> SVR...SMO...  
+# 2.Linear线性分类器
