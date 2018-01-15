@@ -17,4 +17,11 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 P(y=1|x)越大，我们越有**自信**说x对应y的lable为1，这里是基于概率上的**自信**  
 在一个没有概率的分类器上应该怎么定义**Q1**，从图1上来看**自信**就对应点到分类面的距离  
 回到2.线性分类器上：f(x)=wx+b,f(x)>0,lable=1(正例);f(x)<0,lable=-1(反例)  
-分类的超平面(实际是条线):wx+b=0
+分类的超平面(实际是条线):wx+b=0  
+##函数间距
+γ=min f(x)(wx+b),点到分类面的距离**最小**的那个，这些点也称为支持向量，后面说  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-2.png)  
+##几何间距  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-3.png)  
+简单的推导：  
+http://chart.googleapis.com/chart?cht=tx&chl=\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a})
