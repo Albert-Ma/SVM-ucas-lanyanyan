@@ -20,8 +20,9 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
   
 ## 函数间距  
 - 回到2.线性分类器上：f(x)=wx+b,f(x)>0,lable=1(正例);f(x)<0,lable=-1(反例)   
-- 分类的超平面(实际是条线):wx+b=0
+- 分类的超平面(实际是条线):wx+b=0  
 - ___γ=min y(wx+b)___,点到分类面的距离**最小**的那个，这些点也称为支持向量，后面说  
+
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-2.png)  
 ## 几何间距  
 ### 简单的推导（徐君）：  
