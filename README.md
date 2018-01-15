@@ -42,9 +42,9 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - ___最终的Margin就是γ=min γi___
 #### 函数边际和几何边际的关系
 - ___γ = γ^/(|w|2)当(|w|2)=1时两者相等___ 
-#### 最后的优化margin分类器
+#### 最终的基于margin线性分类器
 - ___1.转换为函数边际：max γ <=> max γ^/(|w|2),s.t.yi((w/|w|2)xi+b/|w|2)≥γ^___
 - ___2.消去γ^,对w,b进行放缩对最后结果没有影响：min 1/2*(|w|2)^2   s.t.yi((w/|w|2)xi+b/|w|2)≥1___
 - 目标函数是凸函数，通过二次规划QP可求解  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)   
-# 3.支持向量
+# 4.支持向量
