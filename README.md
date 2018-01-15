@@ -1,8 +1,8 @@
 # SVM-ucas-lanyanyan
 2018年国科大模式识别与机器学习兰艳艳-SVM  
 @2018/15  
-@authon xy
-
+@authon xy  
+鉴于本人时间精力和能力有限，若有错误，请不吝告知
 # 1.History
 创始人及主要的贡献人Vapnik  
 Linear SVM-> Kernelized SVM-> SVR...SMO...  
