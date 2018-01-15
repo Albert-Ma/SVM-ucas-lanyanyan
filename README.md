@@ -13,3 +13,4 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 黑色那条就是最优的分类线，如何以数学的形式刻画这个最优的分类超平面？间隔怎么定义？  
 #  3.Margin(边际或者边距)的来源
 对于logistic 回归问题$$P(y=1|x)=\cfrac{1}{1+e^{{-w^t}x}}$$
+<img src="http://www.forkosh.com/mathtex.cgi? \Large P(y=1|x)=\cfrac{1}{1+e^{{-w^t}x}}">
