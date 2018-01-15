@@ -11,7 +11,7 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 ![图1](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/linear-clasifier.png)  
 - 选择分类面的标准：**泛化误差最小**，可以简单理解为要使得两类之间间隔足够大   
 - 黑色那条就是最优的分类线，Q1间隔怎么定义？Q2如何以数学的形式刻画这个最优的分类超平面？  
-#  3.Margin(边际或者边距)的来源  
+#  3.Margin(边际或者边距)  
 以logistic回归问题为例  
 ![图2](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-1.png)    
 - P(y=1|x)越大，我们越有**自信**说x对应y的lable为1，这里是基于概率上的**自信**  
@@ -41,9 +41,10 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - ___γi是个向量有方向，为了使结果为正乘以yi，γi = yi((w/|w|2)xi+b/|w|2)___
 - ___最终的Margin就是γ=min γi___
 #### 函数边际和几何边际的关系
-- ___γ = γ^/(|w|2)当|w|=1时两者相等___  
-- ___1.转换为函数边际：max γ <=> max γ^/(|w|2),s.t.yi((w/|w|2)xi+b/|w|2)≥γ^___
+- ___γ = γ^/(|w|2)当(|w|2)=1时两者相等___ 
 #### 最后的优化margin分类器
+- ___1.转换为函数边际：max γ <=> max γ^/(|w|2),s.t.yi((w/|w|2)xi+b/|w|2)≥γ^___
 - ___2.消去γ^,对w,b进行放缩对最后结果没有影响：min 1/2*(|w|2)^2   s.t.yi((w/|w|2)xi+b/|w|2)≥1___
 - 目标函数是凸函数，通过二次规划QP可求解  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)   
+# 3.支持向量
