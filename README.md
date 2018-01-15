@@ -27,15 +27,15 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 简单的推导（徐君）：  
 
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-3.png)      
-- wx1+b = 1,wx2+b = -1 => __w(x1-x2) = 2__,以x1(向量)替代x+，x2替代x-   ___1___
-- x1 = x2+λw => __x1-x2 = λw__     ___2___
-- 由1和2推出：2/w = λw => __λ = 2/(w)^2__
+- ___wx1+b = 1,wx2+b = -1___ => ___w(x1-x2) = 2___,以x1(向量)替代x+，x2替代x-   ___1___
+- ___x1 = x2+λw => x1-x2 = λw___     ___2___
+- 由1和2推出：2/w = λw => ___λ = 2/(w)^2___
 - 分类间隔Margin = |x1-x2| = |λw| = 2/(w)^2 * |w| = __2/|w|__
 - 最大化M即max 2/|w|(2/(根号w向量的平方)) 等价于 min|w|^2
 简单的推导（兰艳艳）：  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-5.png) 
 - 点A（xi,yi）,A到分类面的边距γi（向量）
-- 点B用A表示xj = xi-γi(w/|w|2)，将其代入wx+b=0得
-- w(xi-γi(w/|w|2))+b=0 => ___γi=(w/|w|2)xi+b/|w|2___
+- 点B用A表示___xj=xi-γi(w/|w|2)，将其代入wx+b=0得
+- ___w(xi-γi(w/|w|2))+b=0 => γi=(w/|w|2)xi+b/|w|2___
 ### 最后的优化margin分类器
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)  
