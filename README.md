@@ -65,7 +65,7 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 **原始问题如下：**  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-1.png)  
 - 原始问题转换为拉格朗日形式（先不考虑minmize问题）  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-2.png）  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-2.png)  
 - α和β称作拉格朗日乘子，在对偶问题中实际上对应的是y，或者影子价格之类的  
 **考虑拉格朗日形式的性质**  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-3.png)  
@@ -74,6 +74,17 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - 如果约束条件都满足，那么  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-5.png)  
 - 对朗格朗日形式加上minimize问题就等于原始问题了  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-5.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-6.png)  
 **拉格朗日对偶**  
-- 定义
+- 定义问题 minmize L(w,α,β)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-8.png)  
+- 对偶问题  max min形式  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-7.png)  
+- 可以看出来对偶问题始终小于等于原始问题，两者之间存在gap，强对偶时取等号  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-10.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-9.png)  
+- 当拉格朗日对偶问题满足KKT条件，并且f和g函数都是凸，h函数仿射(拟凸？)，对偶问题解等于原始问题的解  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-11.png)  
+- 互补松弛性定义了**支持向量**，当g不等式严格成立时（w+b=1）,即点在margin上，此时α>0，其余α=0，说明只有**支持向量**对margin起作用  
+**回到SVM目标函数求解上来** 
+-
