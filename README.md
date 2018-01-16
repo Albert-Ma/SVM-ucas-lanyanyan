@@ -1,8 +1,8 @@
-[TOC]
 # SVM-ucas-lanyanyan
 2018年国科大模式识别与机器学习兰艳艳-SVM  
 @2018/15  
-@authon xy  
+@authon xy  
+
 鉴于本人时间精力和能力有限，若有错误，请不吝告知
 
 # 1.History
@@ -56,10 +56,15 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - 定义：训练样本中那些最接近分类面的。几何边距中的min γ
 - 对于支持向量来说：*y(wx+b)=1*  
 - 函数边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-3.png)  
-- 几何边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-4.png)*
+- 几何边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-4.png)
 - Margin：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-5.png)  
 - 事实上从几何边际的角度来理解，只有支持向量会对最后的分类面有影响，因为它们到分类面的margin最小，它们支撑着分类面  
 # 5.目标函数求解  
-由于直接堆原始目标函数进行求解太过复杂，通过拉格朗日变换，求解相对容易的对偶问题。关于原始问题和对偶问题，可以看卜东波老师算法课对偶问题一节，讲的十分详细，特别精彩，将对偶问题和原始问题的方方面面都讲的特别清楚，当时眼神中看着的都是发光的卜老师，bling bling那种~  
-## 简单的原始-对偶问题介绍  
-
+由于直接堆原始目标函数进行求解(w,b)太过复杂，通过拉格朗日变换，求解相对容易的对偶问题。关于原始问题和对偶问题，可以看卜东波老师算法课对偶问题一节，讲的十分详细，特别精彩，将对偶问题和原始问题的方方面面都讲的特别清楚，当时眼神中看着的都是发光的卜老师，bling bling那种~  
+## 简单的原始-对偶问题介绍  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-1.png)  
+- 原始问题转换为拉格朗日形式![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-2.png)
+- α和β称作拉格朗日乘子，在对偶问题中实际上对应的是y，或者影子价格之类的  
+- 考虑拉格朗日形式的性质![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-3.png)  
+- 如果约束条件中有一个不满足，结果会是正无穷![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-4.png)  
+- 如果约束条件都满足，那么原始问题的解等于朗格朗日形式的解![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-5.png)
