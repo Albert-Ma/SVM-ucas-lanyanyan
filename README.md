@@ -53,7 +53,7 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-2.png)  
 - 定义：训练样本中那些最接近分类面的。几何边距中的min γ
 - 对于支持向量来说：*y(wx+b)=1*  
-- 函数边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-3.png)***γ^=1***  
-- 几何边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-4.png)***γ = 1/(|w|2)***
-- Margin：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-5.png)***2γ = 2/(|w|2)***  
+- 函数边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-3.png)  
+- 几何边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-4.png)*
+- Margin：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-5.png)  
 - 事实上从几何边际的角度来理解，只有支持向量会对最后的分类面有影响，因为它们到分类面的margin最小，它们支撑着分类面  
