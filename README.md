@@ -162,4 +162,12 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-8.png)  
 
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-9.png)  
-# SMO算法
+# 7.SMO算法
+出发点：由于α参数太多，直接计算复杂且慢
+- 思想：每次固定两个参数，固定一个不可以，因为最优解要满足KKT条件。只选择一个参数的话是个定值，不需优化  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/smo-2.png)  
+- 1.选择α1的标准：最违背kkt条件的；先选边际上的，在选择分错的样本  
+- 2.选择α2的标准：使得α2改变最多（梯度下降可求）  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/smo-3.png)  
+## 最终的算法  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/smo-1.png)
