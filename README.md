@@ -36,7 +36,7 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 ### 简单的推导（兰艳艳）：  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-5.png) 
 - 点A（xi,yi）,A到分类面的边距γi（向量）,γi是第i个点到分类面的距离
-- 点B用A表示xj=___xi-γi(w/|w|2)，将其代入wx+b=0得
+- 点B用A表示xj=xi-γi(w/|w|2)，将其代入wx+b=0得
 - ___w(xi-γi(w/|w|2))+b=0 => γi=(w/|w|2)xi+b/|w|2___  
 - ___γi是个向量有方向，为了使结果为正乘以yi，γi = yi((w/|w|2)xi+b/|w|2)___
 - ___最终的Margin就是γ=min γi___
@@ -47,4 +47,13 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - ___2.消去γ^,对w,b进行放缩对最后结果没有影响：min 1/2*(|w|2)^2   s.t.yi((w/|w|2)xi+b/|w|2)≥1___
 - 目标函数是凸函数，通过二次规划QP可求解  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LR-4.png)   
+- 通过一个符号函数sign进行最后的分类：  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-1.png)
 # 4.支持向量
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-2.png)  
+- 定义：训练样本中那些最接近分类面的。几何边距中的min γ
+- 对于支持向量来说：*y(wx+b)=1*  
+- 函数边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-3.png)***γ^=1***  
+- 几何边际：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-4.png)***γ = 1/(|w|2)***
+- Margin：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-5.png)***2γ = 2/(|w|2)***  
+- 事实上从几何边际的角度来理解，只有支持向量会对最后的分类面有影响，因为它们到分类面的margin最小，它们支撑着分类面  
