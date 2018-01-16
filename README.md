@@ -129,7 +129,7 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 - 从上图可以看出当C增大，边距Margin变小，称C为惩罚因子，变大意味着惩罚越大，对分错的数据更加严苛  
 ## 损失函数  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-13.png)  
-- 可以看出和ERM很像，λ和C等价（C=1/2λ）  
+- 可以看出和ERM很像，λ和C等价（C=2/λ）  
 - 损失函数是henge形式  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-12.png)  
 - 普通二分类是0-1损失，logistic回归是log损失，其实本质都是寻找0-1损失函数上界    
