@@ -61,10 +61,19 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - 事实上从几何边际的角度来理解，只有支持向量会对最后的分类面有影响，因为它们到分类面的margin最小，它们支撑着分类面  
 # 5.目标函数求解  
 由于直接堆原始目标函数进行求解(w,b)太过复杂，通过拉格朗日变换，求解相对容易的对偶问题。关于原始问题和对偶问题，可以看卜东波老师算法课对偶问题一节，讲的十分详细，特别精彩，将对偶问题和原始问题的方方面面都讲的特别清楚，当时眼神中看着的都是发光的卜老师，bling bling那种~  
-## 简单的原始-对偶问题介绍  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-1.png)  
-- 原始问题转换为拉格朗日形式![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-2.png)
+## 简单的原始-对偶问题介绍    
+原始问题如下  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-1.png)  
+- 原始问题转换为拉格朗日形式（先不考虑minmize问题）  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-2.png)
 - α和β称作拉格朗日乘子，在对偶问题中实际上对应的是y，或者影子价格之类的  
-- 考虑拉格朗日形式的性质![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-3.png)  
-- 如果约束条件中有一个不满足，结果会是正无穷![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-4.png)  
-- 如果约束条件都满足，那么原始问题的解等于朗格朗日形式的解![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-5.png)
+**考虑拉格朗日形式的性质**   
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-3.png)  
+- 如果约束条件中有一个不满足，结果会是正无穷  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-4.png)  
+- 如果约束条件都满足，那么
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-5.png)  
+- 对朗格朗日形式加上minimize问题就等于原始问题了  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-5.png)  
+**拉格朗日对偶**  
+- 定义
