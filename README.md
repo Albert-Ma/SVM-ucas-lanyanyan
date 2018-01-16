@@ -143,18 +143,23 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-2.png)  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-3.png)  
 - 从非参数方法角度（基于经验的方法，比如KNN），內积计算就是计算相似度  
-## Kernal
-为什么需要核函数而不是映射函数φ(x)呢？  
+## Kernal  
+为什么需要核函数而不是映射函数φ(x)呢？  
+
 **因为在高维空间上计算內积非常复杂且困难，所以我们是否可以在不知道φ函数（映射空间）具体是什么的情况下直接求得內积呢（核技巧）？答案是肯定的**  
 - 定义：给输入空间X和希尔伯特空间H（一个带有內积的完备空间，和欧式空间相仿），如果存在一个映射φ，使得X->H，K(x,z)=<φ(x),φ(z)>,K就是一个核函数  
 - 给定K(x,z),映射函数φ和H通常不唯一  
+
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-4.png)  
 - 引入核函数的SVM目标函数  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-5.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-5.png)  
+
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-6.png)  
 - 什么样的kernal函数是合法的呢？
 - Mercer定理：对任意m个样本，核函数矩阵总是半正定的。  任何一个核函数都隐式的定义了一个RKHS（再生核希尔伯特空间）  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-7.png)  
 - 一些常用的核函数有多项式核、高斯核  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-8.png)![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-9.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-8.png)  
+
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-9.png)  
 # SMO算法
