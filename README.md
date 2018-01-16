@@ -60,7 +60,7 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - Margin：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-5.png)  
 - 事实上从几何边际的角度来理解，只有支持向量会对最后的分类面有影响，因为它们到分类面的margin最小，它们支撑着分类面  
 # 5.目标函数求解  
-由于直接堆原始目标函数进行求解(w,b)太过复杂，通过拉格朗日变换，求解相对容易的对偶问题。关于原始问题和对偶问题，可以看卜东波老师算法课对偶问题一节，讲的十分详细，特别精彩，将对偶问题和原始问题的方方面面都讲的特别清楚，当时眼神中看着的都是发光的卜老师，bling bling那种~  
+由于直接对原始目标函数进行求解(w,b)太过复杂，通过拉格朗日变换，求解相对容易的对偶问题。关于原始问题和对偶问题，可以看卜东波老师算法课对偶问题一节，讲的十分详细，特别精彩，将对偶问题和原始问题的方方面面都讲的特别清楚，当时眼神中看着的都是发光的卜老师，bling bling那种~  
 https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9.pdf  
 https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pdf  
 ## 简单的原始-对偶问题介绍  
@@ -102,5 +102,24 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 - 可以通过固定n-2个αi，求两个αi,求得最终的α\*  
 - 通过对w求偏导的等式和wx+b=y，求得w\*,b\*   
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-6.png)  
-- 最终的分类面和分类函数为  
+- 最终的分类面和分类函数为（关键注意到后边xi的转置乘以xj）  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-7.png)![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-8.png)
+- 从上面可以看出αi>0只对支持向量，其余向量不起作用，一个更好的形式是求w\*和b\*，只考虑向量的內积(=+-1)，这一点对核函数非常重要  
+**SVM核心思想到这里已经结束了**  
+# 5.软边距  
+真实数据中也可能存在线性不可分或者存在噪声的情况，如下图  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-1.png)  
+- 可以对分错的样本增加一个松弛变量**ξ**容忍这种情况，也称为软边距  
+- 优化的目标函数形式为  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-2.png)  
+- 通过拉格朗日对偶变换得到L，分别对w,b和ξ求偏导得到  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-3.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-4.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-5.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-6.png)  
+- 将以上带回原拉格朗日形式得：  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-7.png)  
+- 根据KKT条件和互补松弛性，支持变量有以下性质：  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-8.png)  
+- 证明如下：
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-9.png)  
