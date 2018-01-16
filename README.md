@@ -107,7 +107,7 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 - 从上面可以看出αi>0只对支持向量，其余向量不起作用，一个更好的形式是求w\*和b\*，只考虑向量的內积(=+-1)，这一点对核函数非常重要  
 **SVM核心思想到这里已经结束了**  
 # 5.软边距  
-真实数据中也可能存在线性不可分或者存在噪声的情况，如下图  
+真实数据中也可能存在线性不可分或者存在噪声的情况，如下图  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-1.png)  
 - 可以对分错的样本增加一个松弛变量**ξ**容忍这种情况，也称为软边距  
 - 优化的目标函数形式为  
@@ -122,4 +122,4 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 - 根据KKT条件和互补松弛性，支持变量有以下性质：  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-8.png)  
 - 证明如下：
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-9.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-9.jpg)  
