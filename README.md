@@ -121,5 +121,18 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-7.png)  
 - 根据KKT条件和互补松弛性，支持变量有以下性质：  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-8.png)  
-- 证明如下：
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-9.png)  
+- 证明如下:  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-9.png)  
+## 参数C的作用  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-10.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-11.png)  
+- 从上图可以看出当C增大，边距Margin变小，称C为惩罚因子，变大意味着惩罚越大，对分错的数据更加严苛  
+## 损失函数  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-13.png)  
+- 可以看出和ERM很像，λ和C等价  
+- 损失函数是henge形式
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-12.png)  
+- 普通二分类是0-1损失，logistic回归是log损失，其实本质都是对0-1损失函数的找上界  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-13.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-14.png)  
+# 6.核函数
