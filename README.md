@@ -130,9 +130,8 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 ## 损失函数  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-13.png)  
 - 可以看出和ERM很像，λ和C等价  
-- 损失函数是henge形式
+- 损失函数是henge形式  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-12.png)  
-- 普通二分类是0-1损失，logistic回归是log损失，其实本质都是对0-1损失函数的找上界  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-13.png)  
+- 普通二分类是0-1损失，logistic回归是log损失，其实本质都是对0-1损失函数的找上界    
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-14.png)  
 # 6.核函数
