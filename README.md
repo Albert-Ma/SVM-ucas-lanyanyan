@@ -96,4 +96,4 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-2.png)  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-3.png)  
 - 将上两式结果代入原拉格朗日形式得  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-4.jpg)
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-4.png)
