@@ -98,7 +98,9 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 - 将上两式结果代入原拉格朗日形式得  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-4.png)  
 - 对偶问题的最终形式  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-5.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-5.png)  
 - 可以通过固定n-2个αi，求两个αi,求得最终的α\*  
-- 通过对w求偏导的等式和wx+b=y，求得w\*,b\* ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-6.png)  
-- 最终的分类面和分类函数为![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-7.png)![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-8.png)
+- 通过对w求偏导的等式和wx+b=y，求得w\*,b\*   
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-6.png)  
+- 最终的分类面和分类函数为  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-7.png)![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/svm-8.png)
