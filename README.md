@@ -122,4 +122,4 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 - 根据KKT条件和互补松弛性，支持变量有以下性质：  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-8.png)  
 - 证明如下：
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-9.jpg)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-9.png)  
