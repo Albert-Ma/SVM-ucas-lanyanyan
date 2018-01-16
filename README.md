@@ -60,22 +60,25 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - Margin：![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/LSVM-5.png)  
 - 事实上从几何边际的角度来理解，只有支持向量会对最后的分类面有影响，因为它们到分类面的margin最小，它们支撑着分类面  
 # 5.目标函数求解  
-由于直接堆原始目标函数进行求解(w,b)太过复杂，通过拉格朗日变换，求解相对容易的对偶问题。关于原始问题和对偶问题，可以看卜东波老师算法课对偶问题一节，讲的十分详细，特别精彩，将对偶问题和原始问题的方方面面都讲的特别清楚，当时眼神中看着的都是发光的卜老师，bling bling那种~  
+由于直接堆原始目标函数进行求解(w,b)太过复杂，通过拉格朗日变换，求解相对容易的对偶问题。关于原始问题和对偶问题，可以看卜东波老师算法课对偶问题一节，讲的十分详细，特别精彩，将对偶问题和原始问题的方方面面都讲的特别清楚，当时眼神中看着的都是发光的卜老师，bling bling那种~链接附上  
+https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9.pdf
+https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pdf
 ## 简单的原始-对偶问题介绍    
-**原始问题如下：**  
+**原始问题**  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-1.png)  
 - 原始问题转换为拉格朗日形式（先不考虑minmize问题）  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-2.png)  
 - α和β称作拉格朗日乘子，在对偶问题中实际上对应的是y，或者影子价格之类的  
-**考虑拉格朗日形式的性质**  
-![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-3.png)  
+- **考虑拉格朗日形式的性质**  
+- 定义max L(w)拉格朗日形式
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-3.png)  
 - 如果约束条件中有一个不满足，结果会是正无穷  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-4.png)  
 - 如果约束条件都满足，那么  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-5.png)  
 - 对朗格朗日形式加上minimize问题就等于原始问题了  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-6.png)  
-**拉格朗日对偶**  
+- **拉格朗日对偶**  
 - 定义问题 minmize L(w,α,β)  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-8.png)  
 - 对偶问题  max min形式  
@@ -86,5 +89,5 @@ Linear SVM-> Kernelized SVM-> SVR...SMO...
 - 当拉格朗日对偶问题满足KKT条件，并且f和g函数都是凸，h函数仿射(拟凸？)，对偶问题解等于原始问题的解  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/pd-11.png)  
 - 互补松弛性定义了**支持向量**，当g不等式严格成立时（w+b=1）,即点在margin上，此时α>0，其余α=0，说明只有**支持向量**对margin起作用  
-**回到SVM目标函数求解上来** 
+- **回到SVM目标函数求解上来** 
 -
