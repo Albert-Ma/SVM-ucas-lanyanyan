@@ -129,9 +129,32 @@ https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/Lec9-Duality-SVM2.pd
 - 从上图可以看出当C增大，边距Margin变小，称C为惩罚因子，变大意味着惩罚越大，对分错的数据更加严苛  
 ## 损失函数  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-13.png)  
-- 可以看出和ERM很像，λ和C等价  
+- 可以看出和ERM很像，λ和C等价（C=1/2λ）  
 - 损失函数是henge形式  
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-12.png)  
-- 普通二分类是0-1损失，logistic回归是log损失，其实本质都是对0-1损失函数的找上界    
+- 普通二分类是0-1损失，logistic回归是log损失，其实本质都是寻找0-1损失函数上界    
 ![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/softM-14.png)  
 # 6.核函数
+- 在很多情况下，其实样本在二维空间上并非线性可分。比如树叶投射到地面上的影子是不可分的，但是在树上，我们可能会找到这么一个平面把叶子分开（老师的例子，哈哈哈  
+## idea的来源  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-1.png)  
+- 从几何上看，将x通过 z = φ(x) 映射到高维空间(特征空间)，寻找超平面  
+- 从目标函数自身的特性来看，优化目标只与<x,x>內积有关。超平面w\*x+b\*=0,w\*和b\*也只与內积有关  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-2.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-3.png)  
+- 从非参数方法角度（基于经验的方法，比如KNN），內积计算就是计算相似度  
+## Kernal
+为什么需要核函数而不是映射函数φ(x)呢？  
+**因为在高维空间上计算內积非常复杂且困难，所以我们是否可以在不知道φ函数（映射空间）具体是什么的情况下直接求得內积呢（核技巧）？答案是肯定的**  
+- 定义：给输入空间X和希尔伯特空间H（一个带有內积的完备空间，和欧式空间相仿），如果存在一个映射φ，使得X->H，K(x,z)=<φ(x),φ(z)>,K就是一个核函数  
+- 给定K(x,z),映射函数φ和H通常不唯一  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-4.png)  
+- 引入核函数的SVM目标函数  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-5.png)  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-6.png)  
+- 什么样的kernal函数是合法的呢？
+- Mercer定理：对任意m个样本，核函数矩阵总是半正定的。  任何一个核函数都隐式的定义了一个RKHS（再生核希尔伯特空间）  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-7.png)  
+- 一些常用的核函数有多项式核、高斯核  
+![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-8.png)![](https://github.com/Albert-xy/SVM-ucas-lanyanyan/blob/master/imp/kernalsvm-9.png)  
+# SMO算法
